@@ -4,7 +4,9 @@ Open-Meteo API를 활용하여 사용자가 입력한 도시의 **7일간 일별
 
 본 프로젝트는 바이브 코딩(Vibe Coding) 실습용으로 설계되었으며, **REST API 연동**, **비동기 데이터 처리**, **React 상태 관리**, **컴포넌트 분리**, **에러·로딩 UI 처리**, **반응형 레이아웃**, **배포 파이프라인**을 한 번에 경험할 수 있도록 구성되어 있습니다.
 
+- **라이브 데모**: https://day3-react-vite-vibe-coding.vercel.app
 - **저장소**: https://github.com/jjsnoel/day3-react-vite-vibe-coding
+- **Vercel 대시보드**: https://vercel.com/jeongjaeseung-s-projects/day3-react-vite-vibe-coding
 - **API 제공**: [Open-Meteo](https://open-meteo.com/) (API Key 불필요)
 
 ---
@@ -636,7 +638,19 @@ npm run preview
 
 ## 16. 빌드 및 배포 (Vercel)
 
-### 16.1 Vercel 프로젝트 연결
+### 16.0 배포 현황 (Production)
+
+| 항목 | URL |
+|------|-----|
+| **Production URL** | https://day3-react-vite-vibe-coding.vercel.app |
+| Vercel 프로젝트 | `jeongjaeseung-s-projects/day3-react-vite-vibe-coding` |
+| 배포 방식 | Vercel CLI (`npx vercel deploy --prod`) |
+| 빌드 결과 | Vite 자동 감지, `npm run build` 성공 |
+
+> **참고**: GitHub 저장소 자동 연동은 Vercel 계정 권한 문제로 CLI 연결에 실패했습니다.  
+> 이후 [Vercel Dashboard](https://vercel.com/jeongjaeseung-s-projects/day3-react-vite-vibe-coding/settings/git)에서 GitHub `jjsnoel/day3-react-vite-vibe-coding`을 수동 연결하면 `main` 푸시 시 자동 배포됩니다.
+
+### 16.1 Vercel 프로젝트 연결 (수동 설정 시)
 
 1. [Vercel Dashboard](https://vercel.com/) → **Add New Project**
 2. GitHub 저장소 `day3-react-vite-vibe-coding` Import
@@ -655,10 +669,17 @@ npm run preview
 
 ### 16.3 배포 후 확인 사항
 
-- [ ] 공개 URL 접속 시 앱 로드
-- [ ] 초기 `Seoul` 7일 예보 자동 표시
-- [ ] 도시 검색 동작
-- [ ] 모바일 뷰포트에서 카드 레이아웃 정상
+- [x] 공개 URL 접속 시 앱 로드 — https://day3-react-vite-vibe-coding.vercel.app
+- [x] 초기 `Seoul` 7일 예보 자동 표시
+- [x] 도시 검색 동작
+- [x] 모바일 뷰포트에서 카드 레이아웃 정상
+
+### 16.4 CLI로 재배포
+
+```bash
+npm install
+npx vercel deploy --prod
+```
 
 ---
 
@@ -711,7 +732,7 @@ Open-Meteo API는 **API Key 없이** 클라이언트에서 직접 호출 가능�
 - [x] 잘못된 도시명·네트워크 오류 시 에러 메시지
 - [x] 모바일·데스크톱 반응형 카드 레이아웃
 - [x] 한글 주요 도시 별칭 검색 (`cityAliases.ts`)
-- [ ] Vercel 배포 URL (배포 후 이 항목을 README에 URL로 갱신)
+- [x] Vercel 배포 URL — https://day3-react-vite-vibe-coding.vercel.app
 
 ---
 
